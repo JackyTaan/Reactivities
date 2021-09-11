@@ -26,14 +26,14 @@ export default function ActivityListItem({activity}: Props) {
                             <Item.Description>Hosted by {activity.host?.displayName}</Item.Description>
                             {activity.isHost && (
                                 <Item.Description>
-                                    <Label sasic color='orange'>
+                                    <Label basic color='orange'>
                                         You are hosting this activity
                                     </Label>
                                 </Item.Description>
                             )}
                             {activity.isGoing && !activity.isHost && (
                                 <Item.Description>
-                                    <Label sasic color='orange'>
+                                    <Label basic color='green'>
                                         You are going to this activity
                                     </Label>
                                 </Item.Description>

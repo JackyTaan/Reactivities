@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Segment, List, Label, Item, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
@@ -8,6 +7,8 @@ import { Activity } from '../../../app/models/activity'
 interface Props {
     activity: Activity;
 }
+
+
 
 export default observer(function ActivityDetailedSidebar ({activity: {attendees, host}}: Props) {
 
@@ -27,7 +28,7 @@ export default observer(function ActivityDetailedSidebar ({activity: {attendees,
             </Segment>
             <Segment attached>
                 <List relaxed divided>
-                    {attendees.map(attendee => {
+                    {attendees.map(attendee => (
                         <Item style={{ position: 'relative' }} key={attendee.username}>
                             {attendee.username === host?.username && 
                         <Label
@@ -45,7 +46,7 @@ export default observer(function ActivityDetailedSidebar ({activity: {attendees,
                             <Item.Extra style={{ color: 'orange' }}>Following</Item.Extra>
                         </Item.Content>
                         </Item>
-                    })}
+                    ))}
                     
                 </List>
             </Segment>

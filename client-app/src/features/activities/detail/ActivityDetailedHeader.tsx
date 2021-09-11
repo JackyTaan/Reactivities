@@ -57,7 +57,7 @@ export default observer (function ActivityDetailedHeader({activity}: Props) {
                         <Button
                             color={activity.isCancelled ? 'green' : 'red'}
                             floated='left'
-                            basiccontent={activity.isCancelled ? 'Re-activate Activity' : 'Cancel Activiy'}
+                            basiccontent={activity.isCancelled ? 'Re-activate Activity' : 'Cancel Activity'}
                             onClick={cancelActivityToggle}
                             loading={loading}
                         />

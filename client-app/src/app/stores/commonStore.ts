@@ -4,7 +4,7 @@ import { ServerError } from "../models/serverError";
 export default class CommonStore {
     error: ServerError | null = null;
     token: string | null = window.localStorage.getItem('jwt');
-    appLoaded =false;
+    appLoaded = false;
 
     constructor() {
         makeAutoObservable(this);
