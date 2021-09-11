@@ -25,7 +25,7 @@ namespace Persistence
                 .WithMany( a => a.Activities)
                 .HasForeignKey(aa => aa.AppUserID);
 
-                builder.Entity<ActivityAttendee>()
+            builder.Entity<ActivityAttendee>()
                 .HasOne( u => u.Activity)
                 .WithMany( a => a.Attendees)
                 .HasForeignKey(aa => aa.ActivityID);

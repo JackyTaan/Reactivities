@@ -14,6 +14,7 @@ export default class ProfileStore {
     }
 
     get isCurrentUser() {
+        //console.log(this.profile);
         if (store.userStore.user && this.profile) {
             return store.userStore.user.username === this.profile.username;
         }
@@ -25,10 +26,12 @@ export default class ProfileStore {
         this.loadingProfile = true;
         try {
             const profile = await agent.Profiles.get(username);
+            //console.log(username);
             runInAction (() => {
                 this.profile = profile;
                 this.loadingProfile =false;
             })
+            //console.log(profile);
         } 
         catch (error) {
             console.log(error);
