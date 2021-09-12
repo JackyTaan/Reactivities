@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Domain;
 using Application.Activities;
 using Application;
-using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
