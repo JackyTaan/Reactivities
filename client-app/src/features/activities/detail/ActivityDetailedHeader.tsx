@@ -24,6 +24,7 @@ interface Props {
 }
 
 export default observer (function ActivityDetailedHeader({activity}: Props) {
+
     const {activityStore: {updateAttendance, loading, cancelActivityToggle}} = useStore();
 
     return (
@@ -44,7 +45,7 @@ export default observer (function ActivityDetailedHeader({activity}: Props) {
                                 />
                                 <p>{format(activity.date!, 'dd MMM yyyy hh:mm aa')}</p>
                                 <p>
-                                    Hosted by <strong><Link to={`/profile/${activity.host?.username}`}>{activity.host?.displayName}</Link> </strong>
+                                    Hosted by <strong><Link to={`/profiles/${activity.host?.username}`}>{activity.host?.displayName}</Link> </strong>
                                 </p>
                             </Item.Content>
                         </Item>

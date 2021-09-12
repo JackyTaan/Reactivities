@@ -24,7 +24,7 @@ return (
                 <Image src={user?.image || '/assets/user.png'} avatar spaced='right' />
                 <Dropdown pointing='top left' text={user?.displayName}>
                     <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to={`/profiles/${user?.displayName.toLowerCase()}`} 
+                        <Dropdown.Item as={Link} to={`/profiles/${user?.username}`} 
                             text='My Profile' icon='user' />
                         <Dropdown.Item onClick={logout} text='logout' icon='power' />
                     </Dropdown.Menu>

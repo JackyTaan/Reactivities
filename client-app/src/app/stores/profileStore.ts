@@ -14,11 +14,11 @@ export default class ProfileStore {
     }
 
     get isCurrentUser() {
-        //console.log(this.profile);
+        
         if (store.userStore.user && this.profile) {
             return store.userStore.user.username === this.profile.username;
         }
-
+        
         return false;
     }
 
