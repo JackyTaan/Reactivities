@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Persistence;
+
 namespace API.Extensions
 {
     public static class ApplicationServiceExtension
@@ -21,8 +22,8 @@ namespace API.Extensions
 
             services.AddDbContext<DataContext>( opt => 
             {
+                //opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
-                //opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
             } );
 
             services.AddCors(opt => {
